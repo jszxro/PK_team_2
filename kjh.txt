@@ -2,21 +2,52 @@
 
 name = input("단어를 입력하세요")
 
-if name[0] == name[-1]:
+if name == name[::-1]:
     print(f'{name}은(는) 거꾸로 해도 똑같은 단어 입니다.')
 else:
     print(f'{name}은(는) 거꾸로 하면 다른 단어 입니다.')
 
 #p2
 
-a = list(map(int,input("값을 입력하세요: ").split()))
-b = []  # 짝수 인덱스의 문자 저장
-c = []  # 홀수 인덱스의 문자 저장
+adn = int(input("추가할 숫자 개수를 입력하세요 : "))
 
-for i in range(len(a)+1):
+num = []  
+c = []  # 짝수 인덱스의 문자 저장
+d = [] # 홀수 인덱스의 문자 저장
+
+for i in range(adn):
+    num.append(list(map(int,input("값을 입력하세요: ").split())))
+print(f'{num}')
+
+
+for i in range(len(num)+1):
     if i % 2 == 0:
-        b.append([i])
+        c.append(i)
     else:
-        c.append([i])
+        d.append(i)
 
-print(f'짝수 리스트 : {b}, 홀수 리스트 : {c}')
+print(f'짝수 리스트 : {c}, 홀수 리스트 : {d}')
+
+#p3
+
+
+add = int(input("추가할 단어 개수를 입력하세요 : "))
+num = []
+mx = []
+mxn = 0
+
+for i in range(add):
+    num.append(input("추가할 단어를 입력하세요 : "))
+print(f'{num}')
+
+# 각 단어의 길이를 비교하여 최대 길이를 구하기
+for i in num:
+    if len(i) > mxn:
+        mxn = len(i)
+print(f'문자의 최대 길이는 : {mxn} 입니다.')
+
+# 최대 길이와 같은 단어들을 찾기
+for i in num:
+    if len(i) == mxn:
+        mx.append(i)
+print(f'가장 긴 문자는 : {mx} 입니다.')
