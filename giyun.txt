@@ -1,1 +1,59 @@
 giyun
+
+q1)
+with open("woo.py", "w",encoding="UTF-8") as f:
+    content ="""import sys
+a= sys.argv[1:]
+result =[]
+class Woo:
+    def __init__(self,word):
+        self.result=[]
+        self.word=word
+    def check(self):
+        for n in self.word : 
+            if n[0]==n[-1]:
+                self.result.append(n)
+                print(f'{n}는 거꾸로 해도 같은 단어 입니다.')
+        return self.result
+b= Woo(a)
+print(b.check())"""
+    f.write(content)
+
+========================================================
+
+q2)
+ls = [1,2,3,4,5,6,7,8,9,10]
+def sep(aa):
+    aa= ls
+    odd=[]
+    even=[]
+    for n in aa:
+        if n%2==0 :
+            odd.append(n)
+        else:
+            even.append(n)
+    return f'홀수: {odd}\n짝수: {even}'
+print(f'홀수: {odd}')
+print(f'짝수: {even}')
+a = sep(ls)
+print(a)
+
+========================================================
+
+q3)
+sentence = input("문장을 입력해 주십시오")
+a=sentence.split(" ")
+b=[]
+c=[]
+print(a)
+for m in a:
+    b.append(len(m))
+nummax=max(b)
+for n in a:
+    print(nummax)
+    if nummax==len(n):
+        c.append(n)
+        
+print(c)
+
+========================================================
