@@ -89,3 +89,17 @@ elif cc==1:
 elif cc==2:
     print("기분이 나빠보이네요")
 ===================================
+p5)
+aa= input("원하시는 문장을 입력하세요")
+bb=aa.split(" ")
+cc=[]
+a=ord('a')
+z=ord('z')
+for n in bb:
+    c=ord(n[0])
+    if a<=c and c<=z :
+        nn=n[0].upper()+n[1:]
+        
+        
+        cc.append(nn)
+print(" ".join(cc)
