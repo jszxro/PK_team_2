@@ -1,1 +1,22 @@
-안녕하세요.
+#p1
+
+name = input("단어를 입력하세요")
+
+if name[0] == name[-1]:
+    print(f'{name}은(는) 거꾸로 해도 똑같은 단어 입니다.')
+else:
+    print(f'{name}은(는) 거꾸로 하면 다른 단어 입니다.')
+
+#p2
+
+a = list(map(int,input("값을 입력하세요: ").split()))
+b = []  # 짝수 인덱스의 문자 저장
+c = []  # 홀수 인덱스의 문자 저장
+
+for i in range(len(a)+1):
+    if i % 2 == 0:
+        b.append([i])
+    else:
+        c.append([i])
+
+print(f'짝수 리스트 : {b}, 홀수 리스트 : {c}')
