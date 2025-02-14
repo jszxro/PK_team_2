@@ -60,6 +60,19 @@ for i in negative_words:
 if is_feeling == False:
     print("평범한 날이네요")
 
+====================================
+#p5 영어로 소문자 입력 받으면 매 첫글자만 대문자로 변경되게 하라. 문장의 마지막은 마침표를 찍어라
+# apples are delicious -> Apples Are Delicious.
+
+sentence = input().split()
+result = []
+
+for i in sentence:
+    for i in range(len(sentence)):
+        sentence[i] = sentence[i][0].upper() + sentence[i][1:]
+    result = ' '.join(sentence) + '.'
+print(result)
+
 
 
 
