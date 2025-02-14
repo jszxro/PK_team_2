@@ -26,7 +26,6 @@ word1 = max(lst0, key=len)
 print(word1)
 
 #P4
-
 positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
 negative_words = ["싫어", "화나", "짜증", "별로", "나빠"]
 
@@ -48,3 +47,10 @@ elif positive < negative :
     print('기분이 나빠보이네요.')
 else :
     print('평범한 하루네요.')
+
+#P5
+u = input('문장을 소문자로 입력하시오: ').split()
+lst = []
+for word in u:
+    lst.append(word.capitalize())
+print(" ".join(lst) + ".")
