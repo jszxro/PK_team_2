@@ -1,0 +1,21 @@
+#1
+def git_PK_2(word):
+    return word == word[::-1]
+word = input('단어를 입력하세요: ')
+
+if git_PK_2(word):
+    print(f'{word}(은)는 회문입니다.')
+else:
+    print(f'{word}(은)는 회문이 아닙니다.')
+
+#2
+lst = list(map(int, input().split()))
+lst1 = []
+lst2 = []
+for i in lst :
+    if i % 2 == 0 :
+        lst1.append(i)
+    else:
+        lst2.append(i)
+print(lst1)
+print(lst2)
