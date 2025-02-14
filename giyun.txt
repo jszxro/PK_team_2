@@ -1,6 +1,6 @@
 giyun
 
-q1)
+p1)
 with open("woo.py", "w",encoding="UTF-8") as f:
     content ="""import sys
 a= sys.argv[1:]
@@ -21,7 +21,7 @@ print(b.check())"""
 
 ========================================================
 
-q2)
+p2)
 ls = [1,2,3,4,5,6,7,8,9,10]
 def sep(aa):
     aa= ls
@@ -40,7 +40,7 @@ print(a)
 
 ========================================================
 
-q3)
+p3)
 sentence = input("문장을 입력해 주십시오")
 a=sentence.split(" ")
 b=[]
@@ -57,3 +57,34 @@ for n in a:
 print(c)
 
 ========================================================
+p4)
+positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
+negative_words = ["싫어", "화나", "짜증", "별로", "나빠"]
+
+# input("하고 싶은 말을 적으세요")
+aa="기분이 짜증나"
+b=aa.split(" ")
+cc=0
+
+for n in b:
+    print(n)
+    for m in positive_words:
+        mm=len(m)
+        # print(n[:mm])
+        # print(m)
+        if n[0:mm]==m:
+            cc=1
+
+        
+    for i in negative_words:
+        ii=len(i)
+        if n[:ii]==i:
+            cc=2
+
+print(b)
+if cc==0:
+    print("평범한 하루네요")
+elif cc==1:
+    print("기분이 좋아보이네요")
+elif cc==2:
+    print("기분이 나빠보이네요")
