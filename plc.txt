@@ -1,6 +1,7 @@
 # 입력을 하면 그 단어가 거꾸로 해도 같은 단어 판별확인 프로그램 ex) 파이썬 인도인 우영우
 word = input("단어를 입력하세요: ")
-if word[0] == word[2]:
+
+if word==word[::-1]:
     print("똑같다")
 else: 
     print("다르다")
