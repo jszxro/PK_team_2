@@ -36,3 +36,28 @@ for word in words:
         long_result.append(word) 
 
 print(long_result)    
+
+====================================
+# p4 긍정 부정 분류
+positive_words = ["좋아","행복","멋져","최고","사랑해"]
+negative_words = ["싫어","화나","짜증","별로","나빠"]
+
+feel = input().split()
+
+is_feeling = False
+
+for i in feel:
+    if i in positive_words:
+        print("기분이 좋아보이네요")
+        is_feeling = True
+        break
+    elif i in negative_words:
+        print("기분이 나빠보이네요")
+        is_feeling = True
+        break
+
+if is_feeling == False:
+    print("평범한 날이네요")
+
+
+
