@@ -23,3 +23,34 @@ for num in a:
         
 print(f'짝수는 {boxA} 입니다.')
 print(f'홀수는 {boxB} 입니다.')
+
+#3번
+
+sentence = input("문장: ")
+words = sentence.split()
+
+long_word = ""
+for word in words:
+    if len(word) > len(long_word):
+        long_word = word
+
+print("가장 긴 단어는:", long_word)
+
+#4번
+
+positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
+negative_words = ["싫어" ,"화나", "짜증", "별로", "나빠"]
+
+A= input("당신의 기분을 한 문장으로 표현해주세요.: ")
+words= A.split()
+for word in words:
+    
+    if word in positive_words:
+        print("기분이 좋아보이네요. ")
+        pass
+        
+    elif word in negative_words:
+        print("기분이 나빠보이네요. ")
+        pass
+    else: 
+        print("평범한 하루네요.")
