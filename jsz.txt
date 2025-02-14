@@ -1,4 +1,4 @@
-#1
+#P1
 def git_PK_2(word):
     return word == word[::-1]
 word = input('단어를 입력하세요: ')
@@ -8,7 +8,7 @@ if git_PK_2(word):
 else:
     print(f'{word}(은)는 회문이 아닙니다.')
 
-#2
+#P2
 lst = list(map(int, input().split()))
 lst1 = []
 lst2 = []
@@ -19,3 +19,9 @@ for i in lst :
         lst2.append(i)
 print(lst1)
 print(lst2)
+
+#P3
+lst0 = input().split()
+word1 = max(lst0, key=len)
+print(word1)
+
