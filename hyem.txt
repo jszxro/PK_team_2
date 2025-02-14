@@ -34,4 +34,4 @@ for word in words:
     if len(word) > len(long_word):
         long_word = word
 
-print("가장 긴 단어:", long_word)
+print("가장 긴 단어는:", long_word)
