@@ -42,22 +42,24 @@ print(long_result)
 positive_words = ["좋아","행복","멋져","최고","사랑해"]
 negative_words = ["싫어","화나","짜증","별로","나빠"]
 
-feel = input().split()
+feel = input()
 
 is_feeling = False
 
-for i in feel:
-    if i in positive_words:
+for i in positive_words:
+    if i in feel:
         print("기분이 좋아보이네요")
         is_feeling = True
         break
-    elif i in negative_words:
+for i in negative_words:
+    if i in feel:
         print("기분이 나빠보이네요")
         is_feeling = True
         break
 
 if is_feeling == False:
     print("평범한 날이네요")
+
 
 
 
