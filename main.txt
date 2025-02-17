@@ -1,9 +1,9 @@
 class Team2:
-    def __init__(self):
-	self.cont=""
-	self.res=[]
+def __init__(self):
+self.cont=""
+self.res=[]
         self.word = input("단어를 입력하세요: ")
-	self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
+self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
     def compare(self):
         if self.word==self.word[::-1]:
             print("똑같다")
