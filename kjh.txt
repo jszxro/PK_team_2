@@ -51,3 +51,30 @@ for i in num:
     if len(i) == mxn:
         mx.append(i)
 print(f'가장 긴 문자는 : {mx} 입니다.')
+
+#p4
+
+
+#p5
+
+
+
+#q1
+asc1 = []
+
+for i in range(65,90):
+    asc1.append(chr(i))
+print(asc1)
+
+#q2
+asc2 = []
+
+for i in range(97,122):
+    asc2.append(chr(i))
+print(asc[::-1])
+
+#q3
+for i in range(65,68):
+    for num in range(1, 11): 
+        print(f"{chr(i)}{num}", end=' ')
+    print()

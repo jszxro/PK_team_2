@@ -30,3 +30,32 @@ class Team2:
     
         print("가장 긴 단어는:", long_result)
 longest_words()
+
+
+    def face(self):
+        self.pw = []
+        self.nw = []
+        self.status = input("당신의 기분을 한 문장으로 표현해주세요: ").split()
+        
+    def p4(self):
+        positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
+        negative_words = ["싫어", "화나", "짜증", "별로", "나빠"]
+
+        print("입력된 단어:", self.status)
+        
+        for i in self.status:
+            if i in positive_words:
+                self.pw.append(i)
+            elif i in negative_words:
+                self.nw.append(i)
+                
+        print("긍정적인 단어:", self.pw)
+        print("부정적인 단어:", self.nw)
+
+        if len(self.pw) > len(self.nw):
+            print("기분이 좋아 보이네요!")
+        elif len(self.nw) > len(self.pw):
+            print("기분이 나빠 보이네요.")
+        else:
+            print("평범한 하루네요.")
+
