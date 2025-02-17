@@ -18,15 +18,15 @@ class Team2:
         print("홀수:", num2)
 
 
-def longest_words():
-    long_result = []
-
-    words = input("문장을 입력하세요: ").split()
-    max_len = len(max(words, key=len))
-
-    for word in words:
-        if len(word) == max_len:
-            long_result.append(word)
-
-    print("가장 긴 단어는:", long_result)
-longest_words()
+    def longest_words():
+        long_result = []
+    
+        words = input("문장을 입력하세요: ").split()
+        max_len = len(max(words, key=len))
+    
+        for word in words:
+            if len(word) == max_len:
+                long_result.append(word)
+    
+        print("가장 긴 단어는:", long_result)
+    longest_words()
