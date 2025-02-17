@@ -29,4 +29,4 @@ class Team2:
                 long_result.append(word)
     
         print("가장 긴 단어는:", long_result)
-    longest_words()
+longest_words()
