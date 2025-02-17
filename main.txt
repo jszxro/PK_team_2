@@ -18,19 +18,16 @@ class Team2:
         print("홀수:", num2)
 
 
-class Team2:
-    def __init__(self):
-        self.long_result = []
+def longest_words():
+    long_result = []
 
-    def find_longest_words(self):
-        words = input("문장을 입력하세요: ").split()
-        max_len = len(max(words, key=len))
+    words = input("문장을 입력하세요: ").split()
+    max_len = len(max(words, key=len))
 
-        for word in words:
-            if len(word) == max_len:
-                self.long_result.append(word)
+    for word in words:
+        if len(word) == max_len:
+            long_result.append(word)
 
-        print("가장 긴 단어는:", self.long_result)
+    print("가장 긴 단어는:", long_result)
 
-team = Team2()
-team.find_longest_words()
+longest_words()
