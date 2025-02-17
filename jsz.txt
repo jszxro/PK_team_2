@@ -54,3 +54,22 @@ lst = []
 for word in u:
     lst.append(word.capitalize())
 print(" ".join(lst) + ".")
+
+=====================2025-02-17
+
+1) 
+for i in range(65,91) :
+    print(chr(i), end=' ')
+print()
+
+2) 
+for i in range(90,64,-1) :
+    print(chr(i), end=' ')
+
+3)
+for l in ['a', 'b', 'c']:
+    for num in range(1, 11): 
+        print(f"{l}{num}", end=' ')
+    print()
+
+
