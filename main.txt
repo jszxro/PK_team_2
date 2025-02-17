@@ -1,7 +1,9 @@
 class Team2:
     def __init__(self):
-         self.word = input("단어를 입력하세요: ")
-	 self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
+	self.cont=""
+	self.res=[]
+        self.word = input("단어를 입력하세요: ")
+	self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
     def compare(self):
         if self.word==self.word[::-1]:
             print("똑같다")
@@ -59,3 +61,14 @@ longest_words()
         else:
             print("평범한 하루네요.")
 
+    def p5(self):
+        self.cont=input("원하시는 문장을 입력하세요")
+        ls=self.cont.split(" ")
+        a=ord('a')
+        z=ord('z')
+        for n in ls:
+            up=ord(n[0])
+            if a<=up and up<=z :
+                word=n[0].upper()+n[1:]
+                self.res.append(word)
+        print(" ".join(self.res))
