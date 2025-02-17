@@ -1,9 +1,12 @@
 class Team2:
-def __init__(self):
-self.cont=""
-self.res=[]
+    def __init__(self):
+        self.cont=""
+        self.res=[]
         self.word = input("단어를 입력하세요: ")
-self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
+        self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
+        self.pw = []
+        self.nw = []
+        self.status = []
     def compare(self):
         if self.word==self.word[::-1]:
             print("똑같다")
@@ -20,7 +23,7 @@ self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
         print("홀수:", num2)
 
 
-    def longest_words():
+    def longest_words(self):
         long_result = []
     
         words = input("문장을 입력하세요: ").split()
@@ -31,12 +34,9 @@ self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
                 long_result.append(word)
     
         print("가장 긴 단어는:", long_result)
-longest_words()
 
 
     def face(self):
-        self.pw = []
-        self.nw = []
         self.status = input("당신의 기분을 한 문장으로 표현해주세요: ").split()
         
     def p4(self):
@@ -72,3 +72,9 @@ longest_words()
                 word=n[0].upper()+n[1:]
                 self.res.append(word)
         print(" ".join(self.res))
+
+obj = Team2()
+obj.compare()
+obj.display_numbers()
+obj.p4()
+obj.p5()
