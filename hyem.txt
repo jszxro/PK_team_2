@@ -60,3 +60,14 @@ elif negative_count > positive_count:
     print("기분이 나빠보이네요.")
 else:
     print("평범한 하루네요.")
+
+#5 : 영어 소문자로 문장을 입력받으면 매 첫글자만 대문자로 변경되게 하여라.
+sentence=input("영어 문장을 입력하세요: ")
+words = sentence.split( )
+
+A=""
+
+for word in words:
+    A += word[0].upper() + word[1:] + " "
+A = A.rstrip() + "."
+print(A)
