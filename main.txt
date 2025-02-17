@@ -29,5 +29,4 @@ def longest_words():
             long_result.append(word)
 
     print("가장 긴 단어는:", long_result)
-
 longest_words()
