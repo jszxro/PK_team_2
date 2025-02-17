@@ -16,3 +16,21 @@ class Team2:
         num1, num2 = self.ex2()
         print("짝수:", num1)
         print("홀수:", num2)
+
+
+class Team2:
+    def __init__(self):
+        self.long_result = []
+
+    def find_longest_words(self):
+        words = input("문장을 입력하세요: ").split()
+        max_len = len(max(words, key=len))
+
+        for word in words:
+            if len(word) == max_len:
+                self.long_result.append(word)
+
+        print("가장 긴 단어는:", self.long_result)
+
+team = Team2()
+team.find_longest_words()
