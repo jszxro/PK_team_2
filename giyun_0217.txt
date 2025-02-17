@@ -16,3 +16,13 @@ z = ord("z") #122
 
 for n in range(122,96,-1):
     print(chr(n))
+
+=========================================
+# 3) A1부터 A10까지 증가 후 B1부터 B10까지 증가 그리고 C1부터 C10까지 증가하게 하라.
+num = 0
+A = ord("A") #65
+check=0
+while num<3 :
+    for n in range(1,11):
+        print(f'{chr(A+num)}{n}')
+    num+=1
