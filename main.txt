@@ -2,30 +2,36 @@ class Team2:
     def __init__(self):
         self.cont=""
         self.res=[]
-        self.word = input("단어를 입력하세요: ")
-        self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
+        self.word = ""
+        self.lst = ""
+        self.long_result=[]
         self.pw = []
         self.nw = []
-        self.status = []
+        self.status = ""
+        
+    #거꾸로 읽어도 같은 단어를 확인하는 함수
     def compare(self):
+        self.word=input("단어를 입력하세요: ")
         if self.word==self.word[::-1]:
             print("똑같다")
         else: 
             print("다르다")
-
+    # 홀수 짝수 나누는 조건 함수 * display_numbers의 하위 함수
     def ex2(self):
+        self.lst = list(map(int, input("숫자를 입력하세요: ").split()))
         lst1 = [i for i in self.lst if i % 2 == 0]
         lst2 = [i for i in self.lst if i % 2 != 0]
         return lst1, lst2
+        
+    #홀수 짝수를 나누어 주는 함수
     def display_numbers(self):
         num1, num2 = self.ex2()
         print("짝수:", num1)
         print("홀수:", num2)
 
-
+    #가장 긴 단어를 가져오는 함수
     def longest_words(self):
-        long_result = []
-    
+        long_result = self.long_result
         words = input("문장을 입력하세요: ").split()
         max_len = len(max(words, key=len))
     
@@ -35,11 +41,14 @@ class Team2:
     
         print("가장 긴 단어는:", long_result)
 
-
+    # 문장을 받는 함수 *p4의 하위 함수
     def face(self):
         self.status = input("당신의 기분을 한 문장으로 표현해주세요: ").split()
-        
+        return self.status
+
+    # 문장을 보고 기분을 나타내는 함수
     def p4(self):
+        self.face()
         positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
         negative_words = ["싫어", "화나", "짜증", "별로", "나빠"]
 
@@ -61,6 +70,7 @@ class Team2:
         else:
             print("평범한 하루네요.")
 
+    #단어 첫글자가 소문자일시 대문자로 바꿔주는 함수
     def p5(self):
         self.cont=input("원하시는 문장을 입력하세요")
         ls=self.cont.split(" ")
@@ -75,6 +85,7 @@ class Team2:
 
 obj = Team2()
 obj.compare()
+obj.longest_words()
 obj.display_numbers()
 obj.p4()
 obj.p5()
